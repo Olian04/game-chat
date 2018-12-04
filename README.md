@@ -20,7 +20,9 @@ chat.pushMessage([
 ]);
 
 chat.onCommand = ({ command, arg }) => ({ 
-  response: { text: 'executed: ' + command, target: 'self', color: 'yellow' }
+  response: [
+    { text: 'executed: ' + command, target: 'self', color: 'yellow' }
+  ],
   prompt: { prompt: command, color: 'yellow' }
 });
 
