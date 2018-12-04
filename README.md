@@ -21,9 +21,11 @@ chat.pushMessage([
 
 chat.onCommand = ({ command, arg }) => ({ 
   response: [
-    { text: 'executed: ' + command, target: 'self', color: 'yellow' }
+    { text: arg, color: 'yellow' }
   ],
-  prompt: { prompt: command, color: 'yellow' }
+  prompt: [
+    { text: command, color: 'yellow' }
+  ],
 });
 
 chat.whileTyping = ({ maybeCommand, message }) => [
@@ -31,4 +33,13 @@ chat.whileTyping = ({ maybeCommand, message }) => [
   { text: maybeCommand, color: 'pink' },
   { text: message, color: 'white' }
 ];
+```
+
+## Ex: 
+
+```
+> /p
+[party]> Hi
+[party]> /s
+> cya
 ```
