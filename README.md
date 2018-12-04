@@ -43,3 +43,5 @@ chat.whileTyping = ({ maybeCommand, message }) => [
 [party]> /s
 > cya
 ```
+
+WIP: https://jsfiddle.net/nx81pcqf/6/
